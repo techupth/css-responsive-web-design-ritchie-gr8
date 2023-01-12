@@ -13,7 +13,7 @@ test('exercise-2-test', async ({ page }) => {
   })
   await page.goto(url)
   expect(await page.screenshot({
-    fullPage: true,
+//     fullPage: true,
   })).toMatchSnapshot({
     name: "ex-2-result.png", // ['example'] should be same file name, must include .png
     threshold: 0.2, // you can adjust to fit each hackhour
