@@ -4,7 +4,7 @@
 const { test, expect } = require("@playwright/test");
 import path from "path";
 test("exercise-2-test", async ({ page }) => {
-  const currentPath = path.join(process.cwd(), "exercise/index.html"); // change [Folder] to name of folder to test.
+  const currentPath = path.join(process.cwd(), "ex-1/index.html"); // change [Folder] to name of folder to test.
 
   const url = "file:///" + currentPath;
   await page.setViewportSize({
