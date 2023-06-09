@@ -14,7 +14,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
-        run: npm install @playwright/test@latest && npm install --save-dev playwright-chromium
+        run: |
+          npm uninstall playwright-chromium
+          npm install -D @playwright/test
       - name: Run Playwright tests
         run: npx playwright test
       - uses: actions/upload-artifact@v3
